@@ -1,8 +1,9 @@
 public class Cat {
     private ICatBehavior behavior;
     private static Cat instance;
+    private Cat(){
 
-
+    }
     public void setBehavior(ICatBehavior behavior) {
         this.behavior = behavior;
     }
@@ -10,6 +11,7 @@ public class Cat {
     public void performBehavior() {
         behavior.performBehavior();
     }
+
     public static Cat getInstance() {
         if (instance == null) {
             instance = new Cat();
